@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/gt-chapter1-helloword/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter10-command-line/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter10-docker/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter2-datasource/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter2-declarative-transaction/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter2-druid/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter2-errorcode/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter2-multi-datasource/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter2-program-transaction/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter2-pure-spring-datasource/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter2-simple-jdbc/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter3-jpa-complex/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter3-jpa/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter3-mybatis-generator/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter3-mybatis-pagehelper/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter3-mybatis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter3-springbucks/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter4-cache/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter4-cahce-with-redis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter4-jedis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter4-mongo-repo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter4-mongo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter4-redis-repo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter4-redis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter5-mongodb/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter5-performance-aspect/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter5-rdbc2-repo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter5-reactive-redis/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter5-reactive-springbucks/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter5-simple-r2dbc/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter5-simple-reactor/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter6-cache/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter6-complex-controller/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter6-context-hierarchy/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter6-exception/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter6-json-view/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter6-more-complex-controller/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter6-simple-controller/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter6-springbucks/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter6-thymeleaf-view/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter7-advanced-resttemplate/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter7-complex-resttemplate/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter7-customer-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter7-simple-resttemplate/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter7-webclient/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter8-hateoas-customer/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter8-hateoas-waiter/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter8-session/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter8-webflux/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter9-auto-configure/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter9-greeting/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/gt-chapter9-spring-boot-auto-configure/src/main/java" charset="UTF-8" />
+  </component>
+</project>

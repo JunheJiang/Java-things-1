@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="true" />
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="gt-chapter8-webflux" />
+        <module name="gt-chapter2-errorcode" />
+        <module name="gt-chapter6-thymeleaf-view" />
+        <module name="gt-chapter8-session" />
+        <module name="gt-chapter4-cache" />
+        <module name="gt-chapter7-customer-service" />
+        <module name="gt-chapter4-jedis" />
+        <module name="gt-chapter10-command-line" />
+        <module name="gt-chapter3-jpa" />
+        <module name="gt-chapter3-springbucks" />
+        <module name="gt-chapter9-auto-configure" />
+        <module name="gt-chapter6-themleaf-view" />
+        <module name="gt-chapter3-mybatis-pagehelper" />
+        <module name="gt-chapter6-more-complex-controller" />
+        <module name="gt-chapter6-springbucks" />
+        <module name="gt-chapter5-simple-reactor" />
+        <module name="gt-chapter2-multi-datasource" />
+        <module name="gt-chapter4-mongo" />
+        <module name="gt-chapter2-pure-spring-datasource" />
+        <module name="gt-chapter7-simple-resttemplate" />
+        <module name="gt-chapter2-datasource" />
+        <module name="gt-chapter6-json-view" />
+        <module name="gt-chapter5-rdbc2" />
+        <module name="gt-chapter6-exception" />
+        <module name="gt-chapter8-hateoas-waiter" />
+        <module name="gt-chapter4-mongo-repo" />
+        <module name="gt-chapter5-rdbc2-repo" />
+        <module name="gt-chapter2-declaration-datasource" />
+        <module name="gt-chapter6-complex-resttemplate" />
+        <module name="gt-chapter2-program-transaction" />
+        <module name="gt-chapter3-mybatis-generator" />
+        <module name="gt-chapter6-context-hierarchy" />
+        <module name="gt-chapter3-jpa-complex" />
+        <module name="gt-chapter9-spring-boot-auto-configure" />
+        <module name="gt-chapter5-mongodb" />
+        <module name="gt-chapter2-jpa-complex" />
+        <module name="gt-chapter6-context-hierancy" />
+        <module name="gt-chapter3-mybatis" />
+        <module name="gt-chapter8-hateoas-customer" />
+        <module name="gt-chapter7-webclient" />
+        <module name="gt-chapter1-helloword" />
+        <module name="gt-chapter7-complex-resttemplate" />
+        <module name="gt-chapter5-simple-r2dbc" />
+        <module name="gt-chapter2-declarative-transaction" />
+        <module name="gt-chapter10-docker" />
+        <module name="gt-chapter4-redis-repo" />
+        <module name="gt-chapter5-reactive-redis" />
+        <module name="gt-chapter4-cahce-with-redis" />
+        <module name="gt-chapter5-performance-aspect" />
+        <module name="gt-chapter5-reactive-springbucks" />
+        <module name="gt-chapter5-simple-r2bc" />
+        <module name="gt-chapter6-complex-controller" />
+        <module name="gt-chapter4-redis" />
+        <module name="gt-chapter2-simple-jdbc" />
+        <module name="t" />
+        <module name="gt-chapter6-cache" />
+        <module name="gt-chapter7-advanced-resttemplate" />
+        <module name="gt-chapter9-greeting" />
+        <module name="gt-chapter6-simple-controller" />
+        <module name="gt-chapter2-druid" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="untitled" target="11" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="gt-chapter1-helloword" options="-parameters" />
+      <module name="gt-chapter10-command-line" options="-parameters" />
+      <module name="gt-chapter10-docker" options="-parameters" />
+      <module name="gt-chapter2-datasource" options="-parameters" />
+      <module name="gt-chapter2-declaration-datasource" options="-parameters" />
+      <module name="gt-chapter2-declarative-transaction" options="-parameters" />
+      <module name="gt-chapter2-druid" options="-parameters" />
+      <module name="gt-chapter2-errorcode" options="-parameters" />
+      <module name="gt-chapter2-jpa-complex" options="-parameters" />
+      <module name="gt-chapter2-multi-datasource" options="-parameters" />
+      <module name="gt-chapter2-program-transaction" options="-parameters" />
+      <module name="gt-chapter2-pure-spring-datasource" options="-parameters" />
+      <module name="gt-chapter2-simple-jdbc" options="-parameters" />
+      <module name="gt-chapter3-jpa" options="-parameters" />
+      <module name="gt-chapter3-jpa-complex" options="-parameters" />
+      <module name="gt-chapter3-mybatis" options="-parameters" />
+      <module name="gt-chapter3-mybatis-generator" options="-parameters" />
+      <module name="gt-chapter3-mybatis-pagehelper" options="-parameters" />
+      <module name="gt-chapter3-springbucks" options="-parameters" />
+      <module name="gt-chapter4-cache" options="-parameters" />
+      <module name="gt-chapter4-cahce-with-redis" options="-parameters" />
+      <module name="gt-chapter4-jedis" options="-parameters" />
+      <module name="gt-chapter4-mongo" options="-parameters" />
+      <module name="gt-chapter4-mongo-repo" options="-parameters" />
+      <module name="gt-chapter4-redis" options="-parameters" />
+      <module name="gt-chapter4-redis-repo" options="-parameters" />
+      <module name="gt-chapter5-mongodb" options="-parameters" />
+      <module name="gt-chapter5-performance-aspect" options="-parameters" />
+      <module name="gt-chapter5-rdbc2" options="-parameters" />
+      <module name="gt-chapter5-rdbc2-repo" options="-parameters" />
+      <module name="gt-chapter5-reactive-redis" options="-parameters" />
+      <module name="gt-chapter5-reactive-springbucks" options="-parameters" />
+      <module name="gt-chapter5-simple-r2bc" options="-parameters" />
+      <module name="gt-chapter5-simple-r2dbc" options="-parameters" />
+      <module name="gt-chapter5-simple-reactor" options="-parameters" />
+      <module name="gt-chapter6-cache" options="-parameters" />
+      <module name="gt-chapter6-complex-controller" options="-parameters" />
+      <module name="gt-chapter6-complex-resttemplate" options="-parameters" />
+      <module name="gt-chapter6-context-hierancy" options="-parameters" />
+      <module name="gt-chapter6-context-hierarchy" options="-parameters" />
+      <module name="gt-chapter6-exception" options="-parameters" />
+      <module name="gt-chapter6-json-view" options="-parameters" />
+      <module name="gt-chapter6-more-complex-controller" options="-parameters" />
+      <module name="gt-chapter6-simple-controller" options="-parameters" />
+      <module name="gt-chapter6-springbucks" options="-parameters" />
+      <module name="gt-chapter6-themleaf-view" options="-parameters" />
+      <module name="gt-chapter6-thymeleaf-view" options="-parameters" />
+      <module name="gt-chapter7-advanced-resttemplate" options="-parameters" />
+      <module name="gt-chapter7-complex-resttemplate" options="-parameters" />
+      <module name="gt-chapter7-customer-service" options="-parameters" />
+      <module name="gt-chapter7-simple-resttemplate" options="-parameters" />
+      <module name="gt-chapter7-webclient" options="-parameters" />
+      <module name="gt-chapter8-hateoas-customer" options="-parameters" />
+      <module name="gt-chapter8-hateoas-waiter" options="-parameters" />
+      <module name="gt-chapter8-session" options="-parameters" />
+      <module name="gt-chapter8-webflux" options="-parameters" />
+      <module name="gt-chapter9-auto-configure" options="-parameters" />
+      <module name="gt-chapter9-greeting" options="-parameters" />
+      <module name="gt-chapter9-spring-boot-auto-configure" options="-parameters" />
+      <module name="spring-all-in" options="-parameters" />
+      <module name="t" options="-parameters" />
+      <module name="untitled" options="-parameters" />
+    </option>
+  </component>
+</project>

@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <packaging>pom</packaging>
+    <modules>
+        <module>gt-chapter1-helloword</module>
+        <module>gt-chapter2-datasource</module>
+        <module>gt-chapter2-declarative-transaction</module>
+        <module>gt-chapter2-druid</module>
+        <module>gt-chapter2-errorcode</module>
+        <module>gt-chapter2-multi-datasource</module>
+        <module>gt-chapter2-program-transaction</module>
+        <module>gt-chapter2-pure-spring-datasource</module>
+        <module>gt-chapter2-simple-jdbc</module>
+        <module>gt-chapter3-jpa-complex</module>
+        <module>gt-chapter3-jpa</module>
+        <module>gt-chapter3-mybatis</module>
+        <module>gt-chapter3-mybatis-generator</module>
+        <module>gt-chapter3-mybatis-pagehelper</module>
+        <module>gt-chapter3-springbucks</module>
+        <module>gt-chapter4-redis</module>
+        <module>gt-chapter4-cache</module>
+        <module>gt-chapter4-cahce-with-redis</module>
+        <module>gt-chapter4-jedis</module>
+        <module>gt-chapter4-mongo</module>
+        <module>gt-chapter4-mongo-repo</module>
+        <module>gt-chapter4-redis-repo</module>
+        <module>gt-chapter5-mongodb</module>
+        <module>gt-chapter5-performance-aspect</module>
+        <module>gt-chapter5-rdbc2-repo</module>
+        <module>gt-chapter5-reactive-springbucks</module>
+        <module>gt-chapter5-reactive-redis</module>
+        <module>gt-chapter5-simple-r2dbc</module>
+        <module>gt-chapter5-simple-reactor</module>
+        <module>gt-chapter6-cache</module>
+        <module>gt-chapter6-complex-controller</module>
+        <module>gt-chapter6-context-hierarchy</module>
+        <module>gt-chapter6-exception</module>
+        <module>gt-chapter6-json-view</module>
+        <module>gt-chapter6-more-complex-controller</module>
+        <module>gt-chapter6-simple-controller</module>
+        <module>gt-chapter6-springbucks</module>
+        <module>gt-chapter6-thymeleaf-view</module>
+        <module>gt-chapter7-advanced-resttemplate</module>
+        <module>gt-chapter7-complex-resttemplate</module>
+        <module>gt-chapter7-simple-resttemplate</module>
+        <module>gt-chapter7-webclient</module>
+        <module>gt-chapter7-customer-service</module>
+        <module>gt-chapter8-hateoas-customer</module>
+        <module>gt-chapter8-hateoas-waiter</module>
+        <module>gt-chapter8-session</module>
+        <module>gt-chapter8-webflux</module>
+        <module>gt-chapter9-auto-configure</module>
+        <module>gt-chapter9-spring-boot-auto-configure</module>
+        <module>gt-chapter9-greeting</module>
+        <module>gt-chapter10-command-line</module>
+        <module>gt-chapter10-docker</module>
+    </modules>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.1.13.RELEASE</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+
+    <groupId>org.example</groupId>
+    <artifactId>spring-all-in</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+
+    <properties>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
+    </properties>
+
+    <dependencyManagement>
+
+    </dependencyManagement>
+
+</project>
