@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MavenProjectsManager">
+    <option name="originalFiles">
+      <list>
+        <option value="$PROJECT_DIR$/gupaoedu-vip-pattern/gupaoedu-vip-pattern-chain/pom.xml" />
+        <option value="$PROJECT_DIR$/gupaoedu-vip-pattern/gupaoedu-vip-pattern-proxy/pom.xml" />
+        <option value="$PROJECT_DIR$/gupaoedu-vip-pattern/gupaoedu-vip-pattern-state/pom.xml" />
+        <option value="$PROJECT_DIR$/gupaoedu-vip-pattern/gupaoedu-vip-pattern-bridge/pom.xml" />
+        <option value="$PROJECT_DIR$/gupaoedu-vip-pattern/gupaoedu-vip-pattern-facade/pom.xml" />
+        <option value="$PROJECT_DIR$/gupaoedu-vip-pattern/gupaoedu-vip-pattern-adapter/pom.xml" />
+        <option value="$PROJECT_DIR$/gupaoedu-vip-pattern/gupaoedu-vip-pattern-builder/pom.xml" />
+        <option value="$PROJECT_DIR$/gupaoedu-vip-pattern/gupaoedu-vip-pattern-command/pom.xml" />
+        <option value="$PROJECT_DIR$/gupaoedu-vip-pattern/gupaoedu-vip-pattern-memento/pom.xml" />
+        <option value="$PROJECT_DIR$/gupaoedu-vip-pattern/gupaoedu-vip-pattern-visitor/pom.xml" />
+        <option value="$PROJECT_DIR$/gupaoedu-vip-pattern/gupaoedu-vip-pattern-delegate/pom.xml" />
+        <option value="$PROJECT_DIR$/gupaoedu-vip-pattern/gupaoedu-vip-pattern-iterator/pom.xml" />
+        <option value="$PROJECT_DIR$/gupaoedu-vip-pattern/gupaoedu-vip-pattern-mediator/pom.xml" />
+        <option value="$PROJECT_DIR$/gupaoedu-vip-pattern/gupaoedu-vip-pattern-observer/pom.xml" />
+        <option value="$PROJECT_DIR$/gupaoedu-vip-pattern/gupaoedu-vip-pattern-strategy/pom.xml" />
+        <option value="$PROJECT_DIR$/gupaoedu-vip-pattern/gupaoedu-vip-pattern-template/pom.xml" />
+        <option value="$PROJECT_DIR$/gupaoedu-vip-pattern/gupaoedu-vip-pattern-composite/pom.xml" />
+        <option value="$PROJECT_DIR$/gupaoedu-vip-pattern/gupaoedu-vip-pattern-decorator/pom.xml" />
+        <option value="$PROJECT_DIR$/gupaoedu-vip-pattern/gupaoedu-vip-pattern-flyweight/pom.xml" />
+        <option value="$PROJECT_DIR$/gupaoedu-vip-pattern/gupaoedu-vip-pattern-prototype/pom.xml" />
+        <option value="$PROJECT_DIR$/gupaoedu-vip-pattern/gupaoedu-vip-pattern-singleton/pom.xml" />
+        <option value="$PROJECT_DIR$/gupaoedu-vip-pattern/gupaoedu-vip-pattern-interpreter/pom.xml" />
+        <option value="$PROJECT_DIR$/gupaoedu-vip-pattern/gupaoedu-vip-pattern-factorymethod/pom.xml" />
+        <option value="$PROJECT_DIR$/gupaoedu-vip-pattern/gupaoedu-vip-pattern-simplefactory/pom.xml" />
+        <option value="$PROJECT_DIR$/gupaoedu-vip-pattern/gupaoedu-vip-pattern-abstractfactory/pom.xml" />
+        <option value="$PROJECT_DIR$/gupaoedu-vip-design-uml/pom.xml" />
+        <option value="$PROJECT_DIR$/gupaoedu-vip-new-pattern/gupaoedu-vip-pattern-servant/pom.xml" />
+        <option value="$PROJECT_DIR$/gupaoedu-vip-new-pattern/gupaoedu-vip-pattern-nullobject/pom.xml" />
+        <option value="$PROJECT_DIR$/gupaoedu-vip-new-pattern/gupaoedu-vip-pattern-objectpool/pom.xml" />
+        <option value="$PROJECT_DIR$/gupaoedu-vip-new-pattern/gupaoedu-vip-pattern-specification/pom.xml" />
+        <option value="$PROJECT_DIR$/gupaoedu-vip-design-principle/gupaoedu-vip-design-principle-openclose/pom.xml" />
+        <option value="$PROJECT_DIR$/gupaoedu-vip-design-principle/gupaoedu-vip-design-principle-lawofdemeter/pom.xml" />
+        <option value="$PROJECT_DIR$/gupaoedu-vip-design-principle/gupaoedu-vip-design-principle-compositereuse/pom.xml" />
+        <option value="$PROJECT_DIR$/gupaoedu-vip-design-principle/gupaoedu-vip-design-principle-interfacegregation/pom.xml" />
+        <option value="$PROJECT_DIR$/gupaoedu-vip-design-principle/gupaoedu-vip-design-principle-liskovsubstitution/pom.xml" />
+        <option value="$PROJECT_DIR$/gupaoedu-vip-design-principle/gupaoedu-vip-design-principle-dependencyinversion/pom.xml" />
+        <option value="$PROJECT_DIR$/gupaoedu-vip-design-principle/gupaoedu-vip-design-principle-simpleresponsibility/pom.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="1.8" project-jdk-type="JavaSDK" />
+</project>
