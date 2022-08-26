@@ -18,7 +18,6 @@
         <module name="gt-chapter3-jpa" />
         <module name="gt-chapter3-springbucks" />
         <module name="gt-chapter9-auto-configure" />
-        <module name="gt-chapter6-themleaf-view" />
         <module name="gt-chapter3-mybatis-pagehelper" />
         <module name="gt-chapter6-more-complex-controller" />
         <module name="gt-chapter6-springbucks" />
@@ -29,21 +28,16 @@
         <module name="gt-chapter7-simple-resttemplate" />
         <module name="gt-chapter2-datasource" />
         <module name="gt-chapter6-json-view" />
-        <module name="gt-chapter5-rdbc2" />
         <module name="gt-chapter6-exception" />
         <module name="gt-chapter8-hateoas-waiter" />
         <module name="gt-chapter4-mongo-repo" />
         <module name="gt-chapter5-rdbc2-repo" />
-        <module name="gt-chapter2-declaration-datasource" />
-        <module name="gt-chapter6-complex-resttemplate" />
         <module name="gt-chapter2-program-transaction" />
         <module name="gt-chapter3-mybatis-generator" />
         <module name="gt-chapter6-context-hierarchy" />
         <module name="gt-chapter3-jpa-complex" />
         <module name="gt-chapter9-spring-boot-auto-configure" />
         <module name="gt-chapter5-mongodb" />
-        <module name="gt-chapter2-jpa-complex" />
-        <module name="gt-chapter6-context-hierancy" />
         <module name="gt-chapter3-mybatis" />
         <module name="gt-chapter8-hateoas-customer" />
         <module name="gt-chapter7-webclient" />
@@ -57,11 +51,9 @@
         <module name="gt-chapter4-cahce-with-redis" />
         <module name="gt-chapter5-performance-aspect" />
         <module name="gt-chapter5-reactive-springbucks" />
-        <module name="gt-chapter5-simple-r2bc" />
         <module name="gt-chapter6-complex-controller" />
         <module name="gt-chapter4-redis" />
         <module name="gt-chapter2-simple-jdbc" />
-        <module name="t" />
         <module name="gt-chapter6-cache" />
         <module name="gt-chapter7-advanced-resttemplate" />
         <module name="gt-chapter9-greeting" />
@@ -79,11 +71,9 @@
       <module name="gt-chapter10-command-line" options="-parameters" />
       <module name="gt-chapter10-docker" options="-parameters" />
       <module name="gt-chapter2-datasource" options="-parameters" />
-      <module name="gt-chapter2-declaration-datasource" options="-parameters" />
       <module name="gt-chapter2-declarative-transaction" options="-parameters" />
       <module name="gt-chapter2-druid" options="-parameters" />
       <module name="gt-chapter2-errorcode" options="-parameters" />
-      <module name="gt-chapter2-jpa-complex" options="-parameters" />
       <module name="gt-chapter2-multi-datasource" options="-parameters" />
       <module name="gt-chapter2-program-transaction" options="-parameters" />
       <module name="gt-chapter2-pure-spring-datasource" options="-parameters" />
@@ -103,24 +93,19 @@
       <module name="gt-chapter4-redis-repo" options="-parameters" />
       <module name="gt-chapter5-mongodb" options="-parameters" />
       <module name="gt-chapter5-performance-aspect" options="-parameters" />
-      <module name="gt-chapter5-rdbc2" options="-parameters" />
       <module name="gt-chapter5-rdbc2-repo" options="-parameters" />
       <module name="gt-chapter5-reactive-redis" options="-parameters" />
       <module name="gt-chapter5-reactive-springbucks" options="-parameters" />
-      <module name="gt-chapter5-simple-r2bc" options="-parameters" />
       <module name="gt-chapter5-simple-r2dbc" options="-parameters" />
       <module name="gt-chapter5-simple-reactor" options="-parameters" />
       <module name="gt-chapter6-cache" options="-parameters" />
       <module name="gt-chapter6-complex-controller" options="-parameters" />
-      <module name="gt-chapter6-complex-resttemplate" options="-parameters" />
-      <module name="gt-chapter6-context-hierancy" options="-parameters" />
       <module name="gt-chapter6-context-hierarchy" options="-parameters" />
       <module name="gt-chapter6-exception" options="-parameters" />
       <module name="gt-chapter6-json-view" options="-parameters" />
       <module name="gt-chapter6-more-complex-controller" options="-parameters" />
       <module name="gt-chapter6-simple-controller" options="-parameters" />
       <module name="gt-chapter6-springbucks" options="-parameters" />
-      <module name="gt-chapter6-themleaf-view" options="-parameters" />
       <module name="gt-chapter6-thymeleaf-view" options="-parameters" />
       <module name="gt-chapter7-advanced-resttemplate" options="-parameters" />
       <module name="gt-chapter7-complex-resttemplate" options="-parameters" />
@@ -135,7 +120,6 @@
       <module name="gt-chapter9-greeting" options="-parameters" />
       <module name="gt-chapter9-spring-boot-auto-configure" options="-parameters" />
       <module name="spring-all-in" options="-parameters" />
-      <module name="t" options="-parameters" />
       <module name="untitled" options="-parameters" />
     </option>
   </component>
