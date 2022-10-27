@@ -1,0 +1,49 @@
+Redis安装（Windows）
+到微软的官方开源技术站点https://github.com/MSOpenTech/redis下载Windows版本的Redis安装包，直接运行安装即可。
+使用命令行进入Redis的安装目录，输入如下命令即可启动Redis：
+redis-server.exe  redis.windows.conf
+注意redis.windows.conf是Redis的配置文件，Windows版本还有另一个配置文件redis.windows-service.conf（与redis.windows.conf主要区别是设置了syslog-enabled yes），如果使用这个配置文件启动Redis，则可以将Redis加入到Windows服务中，随开机自动启动。
+启动Redis后，运行Redis的客户端软件redis-cli.exe，则可以使用Redis的命令操作Redis了，如图所示，set是Redis命令，设置一个键为user，值为helloworld的数据，使用get命令获得键为user的值：
+
+在Redis客户端中输入shutdown则可以关闭Redis，如果Redis是作为Windows服务启动，也可以在控制面板中选择【管理工具】→【查看本地服务】，重新启动或停止Redis。
+安装好Windows版本的Redis后，我们还需要安装PHP的Redis扩展以便能在PHP中访问Redis服务器。在http://pecl.php.net/站内搜索Redis可以找到phpredis（http://pecl.php.net/package/redis），选择下载线程安全的DLL版本，下载后将php_redis.dll复制到C:\php\ext\内。
+修改php.ini文件，添加Redis扩展的支持如下，然后重新启动Apache服务器:
+extension=php_redis.dll
+
+
+Redis安装（Linux）
+输入下面的命令下载并编译Redis：
+wget http://download.redis.io/releases/redis-3.2.3.tar.gz
+chmod 777 redis-3.2.3.tar.gz
+tar xzf redis-3.2.3.tar.gz
+cd redis-3.2.3
+make
+编译后，运行src文件夹内的redis-server即可启动Redis服务器，注意redis.conf是Redis服务器的配置文件，Redis的客户端redis-cli也在这个文件夹内。
+src/redis-server redis.conf
+在安装phpredis之前，通常还需要先安装一些依赖包。
+如果提示需要安装autoconf，使用yum直接安装即可。
+如果提示找不到igbinary .h，可以到https://github.com/igbinary/igbinary下载最新版（支持php7），解压后，输入如下命令产生配置文件，注意在不同的PHP安装环境下phpize的路径位置有可能会不同。
+/usr/local/php/bin/phpize
+编译配置：
+./configure \
+--enable-igbinary \
+--with-php-config=/usr/local/php/bin/php-config
+最后执行make && make install进行编译、安装。
+
+
+
+安装phpredis
+到https://github.com/phpredis/phpredis下载phpredis，解压后，进入解压目录内，输入如下命令生成configrue文件。
+/usr/local/php/bin/phpize
+编译配置：
+./configure \
+--enable-redis-igbinary \
+--with-php-config=/usr/local/php/bin/php-config
+最后执行make && make install进行编译、安装。
+
+修改php.ini如下，除了引用到Redis的库，还可以将Session的保存路径设为Redis，这样Session的信息将保存在内存而不是文件内。
+extension=igbinary.so
+extension=redis.so
+session.save_handler = redis
+session.save_path = "tcp://127.0.0.1:6379"
+重启Apache。

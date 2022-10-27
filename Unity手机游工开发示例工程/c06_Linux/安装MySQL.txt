@@ -1,0 +1,37 @@
+安装MySQL（Windows）
+到MySQL的官方网站http://dev.mysql.com/downloads/下载Windows版本的MySQL安装包，安装时要确认安装了MySQL Workbench组件（管理MySQL的图形化工具），也可以选择完整安装。服务器类型默认为Development Machine（作为开发机），通讯端口默认为3306。
+安装过程中会设置管理员密码，这个密码后面会经常用到，一定要记住。安装过程中选中Start the MySQL Server at System Startup选项，会在系统启动时自动启用MySQL服务。最后执行MySQL的设置，全部通过表示成功启动MySQL服务。
+安装完成后，可以先简单试一下数据库功能。在开始菜单选择MySQL 5.7 Command Line Client（版本不同名称可能不一样）启动MySQL命令行窗口，输入管理员密码，进入MySQL命令行模式，输入SQL命令“show databases;”后回车，显示出默认的数据库。
+后面如果需要修改数据库密码，输入：
+SET PASSWORD=PASSWORD('your new password');
+
+安装MariaDB(Linux CentOS)
+yum install mariadb mariadb-server mariadb-devel –y
+使用下面的命令启动MariaDB服务：
+systemctl start mariadb.service
+systemctl enable mariadb.service
+输入命令使MySQL服务可以在服务器重启后自动启动：
+chkconfig mariadb on
+输入下面的命令按提示设置管理员密码（默认的的密码为空）等，这一步非常重要。
+mysql_secure_installation
+如果需要更改管理器员密码，只需要输入如下命令，然后回车，输入之前的密码通过验证即可。
+mysqladmin –u root –p password 新密码
+默认MySQL的配置文件放在/etc/my.cnf，使用utf8使其默认支持中文：
+[mysqld]
+datadir=/var/lib/mysql
+socket=/var/lib/mysql/mysql.sock
+character-set-server=utf8
+init_connect='SET NAMES utf8'
+输入mysql –u root –p命令即在Linux控制台登陆MySQL。在Linux上，MySQL默认可能不允许由外网连接，输入下面的语句，创建新用户，将“host”替换为管理员计算机的IP地址，，将“yourpassword”替换为密码，即可由管理员的计算机远程连接到MySQL数据库。
+GRANT ALL PRIVILEGES ON *.* TO 'root'@'host' IDENTIFIED BY 'yourpassowrd' WITH GRANT OPTION;
+
+
+Linux配置
+修改php.ini，先在Linux控制台输入mysql –u root –p命令登陆MySQL，输入命令show variables like '%socket';找到socket的位置。
+
+打开php.ini进行编辑:
+pdo_mysql.default_socket=/var/lib/mysql/mysql.sock
+重启Apache服务器。
+
+更改管理器员密码。
+mysqladmin –u root –p password 新密码

@@ -1,0 +1,63 @@
+安装Apache（Windows）
+http://httpd.apache.org/是Apache的官方网址，但这里并不一定会提供编译好的Windows的版本。自行在Windows上编辑Apache非常麻烦，推荐到 http://www.apachelounge.com/ 下载编译好的Apache。需要注意的是，在Windows上编译Apache的版本和编译PHP的Visual Studio版本必须一致，否则可能会产生问题。
+解压下载的Apache压缩包，为了使默认的配置能正常工作，建议解压到C盘，确定将Apache24（版本不同名称可能不同）这个目录置于C盘根目录。然后在命令行中使用cd命令浏览到Apache的bin目录，输入 httpd- k install 安装Apache服务（需要管理员权限），然后输入 httpd- k start 命令启动Apache服务。
+打开web浏览器，输入localhost或127.0.0.1（本地地址），如果看到如图6-2所示的页面，说明Apache已经开始工作了。
+在Windows上启动Apache的过程中，经常会遇到不能启动Apache服务的情况，一个比较常见的原因是默认的80端口被占用。这种情况，需要关闭占用80端口的软件。打开命令提示符窗口，输入 netstat –a –n -o ，然后找到使用80端口的PID。在任务管理器中根据PID找到占用80端口的程序，将其关掉，如图6-4所示，然后重启Apache服务器即可。
+最后，如果需要是从外网访问Windows上的Apache，不要忘记在防火墙中加入Apache安装目录bin下面的httpd.exe，使其通过防火墙。
+一些常用命令：
+httpd- k start：启动apache服务器。
+httpd- k restart：重新启动apache服务器。
+httpd- k stop：停止apache服务器。
+httpd -V：查看Apache版本信息。
+httpd -M：查看读入的模块。
+
+
+安装Apache（Linux CentOS）
+
+首先要安装C++编译器：
+yum install gcc gcc-c++
+在安装Apache之前，可能还需要安装一些依赖包。
+安装APR，下载地址 http://archive.apache.org/dist/apr/
+wget http://archive.apache.org/dist/apr/apr-1.5.2.tar.gz
+chmod 777 apr-1.5.2.tar.gz
+tar -xvf apr-1.5.2.tar.gz
+cd apr-1.5.2
+sudo ./configure --prefix=/usr/local/apr
+sudo make && make install
+安装APR-UTIL，下载地址 http://archive.apache.org/dist/apr/
+wget http://archive.apache.org/dist/apr/apr-util-1.5.4.tar.gz
+chmod 777 apr-util-1.5.4.tar.gz
+tar -xvf apr-util-1.5.4.tar.gz
+cd apr-util-1.5.4
+sudo ./configure -prefix=/usr/local/apr-util --with-apr=/usr/local/apr
+sudo make && make install
+安装Pcre，下载地址 http://pcre.org/ ，下载完成后解压安装（注意不要安装2.x版本)。
+wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.38.tar.gz
+chmod 777 pcre-8.38.tar.gz
+tar -xvf pcre-8.38.tar.gz
+cd pcre-8.38
+sudo ./configure --prefix=/usr/local/pcre
+sudo make && make install
+下载并配置Apache24，下载地址 http://httpd.apache.org/
+wget http://mirrors.hust.edu.cn/apache//httpd/httpd-2.4.34.tar.gz
+chmod 777 httpd-2.4.34.tar.gz
+tar -xvf httpd-2.4.34.tar.gz
+cd httpd-2.4.34
+sudo ./configure \
+--prefix=/usr/local/apache \
+--with-layout=Apache \
+--enable-modules=most \
+--enable-mods-shared=all \
+--enable-so \
+--with-mpm=prefork \
+--with-apr=/usr/local/apr \
+--with-apr-util=/usr/local/apr-util \
+--with-pcre=/usr/local/pcre
+输入下面的命令检查是否有错误，如果返回0则表示没有错误：
+echo $?
+安装Apache：
+sudo make && make install
+使用Apache，经常需要访问Apache的httpd以便输入Apache的命令，httpd放在 /usr/local/apache/bin/ 目录内，为了不要每次输入长长的路径，可以使用如下命令得到快捷方式。
+ln  -s  /usr/local/apache/bin/httpd  /usr/bin/httpd
+chmod  ugo+x  /usr/bin/httpd
+现在，输入 httpd –k start就可以启动Apache服务器了。

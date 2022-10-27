@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="nettyresearch" />
         <module name="netty-chapter1" />
+        <module name="netty-example" />
       </profile>
     </annotationProcessing>
   </component>

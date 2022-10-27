@@ -1,0 +1,171 @@
+安装PHP(Windows)
+http://php.net/是PHP官方网址，PHP有多种版本，到http://windows.php.net/下载Windows版本的PHP，这里要注意编译PHP的VC版本和编译Apache的版本要一致。在Windows上，如果使用Apache作为服务器，只能下载线程安全版本的PHP，目前最新版本为php7，解压下载的压缩包到C盘，确定将PHP根目录名称设为“php”。
+在php文件夹内找到php.ini-development文件（应用于发布环境要使用php.ini-production），将其备份，然后更名为php.ini。使用文本编辑器打开php.ini文件，找到extension_dir = "./"，在这里设置PHP扩展路径，如下所示：
+extension_dir = "c:/php/ext"
+在php.ini文件中继续查找，找到;extension=php_mysql.dll（php7已经去掉了这个配置） ;extension=php_mysqli.dll和;extension=php_pdo_mysql.dll分别将前面的“;”号去掉启用MySQL扩展，然后保存文件，如下所示：
+extension=php_mysql.dll
+extension=php_mysqli.dll
+extension=php_pdo_mysql.dll
+在Apache的安装目录/Apache24 /conf内找到httpd.conf文件，使用文本编辑器将其打开。在httpd.conf文件末端添加如下脚本，需要注意的是，脚本内容需要对应当前安装的PHP或Apache版本：
+LoadModule php7_module "c:/php/php7apache2_4.dll"
+AddHandler application/x-httpd-php .php
+
+# configure the path to php.ini
+PHPIniDir "c:/php/"
+<FilesMatch \.php$>
+      SetHandler application/x-httpd-php
+</FilesMatch>
+网站根目录默认是存放在Apache安装目录内的htdocs内，在httpd.conf文件内查找到DocumentRoot，可以自定义网站的默认位置，如下所示：
+DocumentRoot "d:/web"
+<Directory "d:/web">
+现在，d:/web路径即作为网站的根目录。如果需要在一台主机上添加多个不同域名的网站，还需要编辑httpd.conf，找到LoadModule vhost_alias_module modules/mod_vhost_alias.so，将前面的；号去掉启用虚拟地址，然后可以参考extra/ httpd-vhosts.conf中的虚拟地址示例添加虚拟地址即可。
+网站的默认启动页是index.html，在httpd.conf文件内查找“”，添加“DirectoryIndex index.php”，使index.php文件也可以作为网站的启动页面，如下所示：
+<IfModule dir_module>
+    DirectoryIndex index.html
+    DirectoryIndex index.php
+</IfModule>
+在控制台进入Apache安装目录，执行bin目录内的httpd重新启动Apache服务。
+bin\httpd –k restart
+
+
+安装PHP(Linux CentOS)
+首先安装可能需要的依赖包：
+yum -y install libjpeg libjpeg-devel libpng libpng-devel freetype freetype-devel libxml2 libxml2-devel pcre-devel curl-devel libxslt libxslt-devel
+下载PHP源码并解压。
+wget http://au1.php.net/get/php-7.0.31.tar.gz/from/this/mirror
+tar  -xf  php-7.0.31.tar.gz
+cd php-7.0.31
+./buildconf –force
+配置PHP的编译设置（先要找到 apxs,将第一行替换为#!/usr/bin/perl -w），如果不确定Perl的安装路径，可以输入which perl查询：
+./configure --prefix=/usr/local/php \
+ --with-config-file-path=/usr/local/php/etc \
+ --with-apxs2=/usr/local/apache/bin/apxs \
+ --with-curl \
+ --with-freetype-dir \
+ --with-gd \
+ --with-gettext \
+ --with-iconv-dir \
+ --with-kerberos \
+ --with-libdir=lib64 \
+ --with-libxml-dir \
+ --with-mysqli \
+ --with-openssl \
+ --with-pcre-regex \
+ --with-pdo-mysql \
+ --with-pdo-sqlite \
+ --with-pear \
+ --with-png-dir \
+ --with-xmlrpc \
+ --with-xsl \
+ --with-zlib \
+ --enable-fpm \
+ --enable-bcmath \
+ --enable-libxml \
+ --enable-inline-optimization \
+ --enable-gd-native-ttf \
+ --enable-mbregex \
+ --enable-mbstring \
+ --enable-opcache \
+ --enable-pcntl \
+ --enable-shmop \
+ --enable-soap \
+ --enable-sockets \
+ --enable-sysvsem \
+ --enable-xml \
+ --enable-zip
+输入make命令编译PHP：
+Make
+Make test
+Make install
+修改Apache和PHP的配置文件,将PHP安装目录下的php.ini-production（或php.ini-development）重命名为php.ini。 编辑php.ini，找到;extension=php_mysqli.dll和;extension=php_pdo_mysql.dll分别将前面的“;”号去掉启用MySQL扩展，指定默认的mysql.sock，并添加AddHandler，然后保存文件，并上传至Linux服务器/usr/local/php/lib/php/，如下所示：
+extension=php_mysqli.dll
+extension=php_pdo_mysql.dll
+
+mysqli.default_socket = /var/lib/mysql/mysql.sock
+
+AddHandler application/x-httpd-php .php
+到/usr/local/apache/conf编辑httpd.conf，使Apache支持PHP：
+# 该选项默认已打开
+LoadModule php7_module        modules/libphp7.so
+
+AddHandler application/x-httpd-php .php
+
+# configure the path to php.ini
+PHPIniDir "/usr/local/php/lib/php/"
+<FilesMatch \.php$>
+      SetHandler application/x-httpd-php
+</FilesMatch>
+去掉LoadModule speling_module modules/mod_speling.so前面的;号，使其不会区分Uri大小写。
+LoadModule speling_module modules/mod_speling.so
+CheckSpelling on
+重启Apache，打开浏览器访问外网地址，查看是否配置成功。
+使用PHP发送电子邮件(Windows)
+描述
+
+到网站http://glob.com.au/sendmail/下载SendEmail安装包。
+解压下载的sendmail.zip至本地，这里解压到Windows目录"C:\php\sendmail"中。
+这里使用的是阿里云邮箱，修改php.ini，如下所示:
+[mail function]
+; For Win32 only.
+SMTP = smtp.mxhichina.com
+smtp_port = 25
+; For Win32 only.
+;sendmail_from = 你的邮箱
+; For Unix only.  You may supply arguments as well (default: "sendmail -t -i").
+sendmail_path = "C:/PHP/sendmail/sendmail.exe -t"
+修改sendmail.ini:
+smtp_server=smtp.mxhichina.com
+smtp_port=25
+auth_username=邮箱登陆名称（一般就是邮箱名称）
+auth_password=邮箱密码
+force_sender=发送邮件的邮箱名称
+PHP测试代码：
+if(mail("目标邮箱","邮件名","邮件内容","From:发件人名称\n"))
+    echo "发送成功";
+else
+    echo "发送失败";
+使用PHP发送电子邮件(Linux CentOS)
+描述
+
+输入命令安装sendmail:
+yum -y install sendmail
+yum -y install sendmail-cf
+配置Senmail的SMTP认证,将上面两行的dnl去掉。在sendmail文件中，dnl表示该行为注释行，是无效的，因此通过去除行首的dnl字符串可以开启相应的设置行。
+vi /etc/mail/sendmail.mc
+dnl TRUST_AUTH_MECH(`EXTERNAL DIGEST-MD5 CRAM-MD5 LOGIN PLAIN')dnl
+dnl define(`confAUTH_MECHANISMS', `EXTERNAL GSSAPI DIGEST-MD5 CRAM-MD5 LOGIN PLAIN')dnl
+设置Sendmail服务的网络访问权限,将127.0.0.1改为0.0.0.0，意思是任何主机都可以访问Sendmail服务。如果仅让某一个网段能够访问到Sendmail服务，将127.0.0.1改为形如192.168.1.0/24的一个特定网段地址。
+vi /etc/mail/sendmail.mc
+DAEMON_OPTIONS(`Port=smtp,Addr=127.0.0.1, Name=MTA')dnl
+Sendmail的配置文件由m4来生成，m4工具在sendmail-cf包中。如果系统无法识别m4命令，说明sendmail-cf软件包没有安装。
+m4 /etc/mail/sendmail.mc > /etc/mail/sendmail.cf
+利用外部的smpt服务器 在/etc/mail.rc中添加如下两行语句：
+set from=xxx@xxx.com smtp=smtp.mxhichina.com
+set smtp-auth-user=xxx@xxx.com smtp-auth-password=******* smtp-auth=login
+在控制台输入hostname查看主机名称，比如这里叫bigcatgame，然后查看/etc/hosts：
+127.0.0.1 localhost
+::1         localhost localhost.localdomain ...
+xx.xxx.x.xxx bigcatgame
+编辑修改/etc/hosts：
+127.0.0.1 localhost
+::1         localhost localhost.localdomain ... bigcatgame
+xx.xxx.x.xxx bigcatgame
+输入命令启动sendmail服务（service sendmail restart 重新重启）：
+service sendmail start
+检查服务是否加入自启行列
+chkconfig --list |grep sendmail
+输入 rpm -ql sendmail查看安装路径（或whereis sendmail）
+修改php.ini:
+[mail function]
+; For Win32 only.
+; http://php.net/smtp
+SMTP=smtp.mxhichina.com
+; http://php.net/smtp-port
+smtp_port = 25
+; For Win32 only.
+; http://php.net/sendmail-from
+sendmail_from = xxx@xxx.com
+; For Unix only.  You may supply arguments as well (default: "sendmail -t -i").
+; http://php.net/sendmail-path
+sendmail_path =/usr/sbin/sendmail -f xxx@xxx.com -t -i
+重启Apache服务器。
